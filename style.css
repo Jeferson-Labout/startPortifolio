@@ -31,6 +31,15 @@ p {
     letter-spacing: 0.05rem;
 
 }
+body{
+    
+    background: #1d1d1d;
+   
+    color: #fff;
+    
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
 
 
@@ -41,7 +50,7 @@ p {
     align-items: center;
     justify-content: center;
 }
-
+/* 
 .section-title {
     font-size: 4rem;
     font-weight: 500;
@@ -59,9 +68,19 @@ p {
     white-space: nowrap;
     animation: caret .5s step-end infinite alternate,
         type 5s steps(23, end)
-}
+} */
 
-.section-title {}
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: orange;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    
+}
 
 
 
@@ -171,6 +190,62 @@ header .menu {
     justify-content: space-between;
 }
 
+ #about h2 {
+    font-family: font-file-82132;
+    color: #08fdd8;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    margin-bottom: 40px;
+    left: -10px;
+    font-size: 7.3rem;
+    line-height: 6.7rem;
+}
+
+
+#about h2:before {
+    content: '<h2>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -4rem;
+    left: -1rem;
+}
+
+#about h2:after {
+    content: '<h2/>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    left: -1rem;
+    bottom: -5rem;
+}
+#about  p:first-of-type:before {
+    content: '<p>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -2rem;
+    left: -2rem;
+}
+#about  p {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#about  p:last-of-type:after {
+    content: '<p/>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #515152;
+    font-size: 18px;
+    position: absolute;
+    left: -2rem;
+    bottom: -3rem;
+}
+
 
 /* Seção de apresentação */
 #presentation {
@@ -234,7 +309,7 @@ header .menu {
     width: 0;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
-    background-color: gold;
+    background-color: orange;
 
 }
 
@@ -359,7 +434,7 @@ header .menu {
 
 @keyframes text_reveal_name {
     100% {
-        color: gold;
+        color: orange;
         font-weight: 500px;
     }
 }
@@ -378,7 +453,7 @@ header .menu {
 
 /* Media Query */
 @media only screen and (min-width: 768px) {
-    #portfolio .project-item {
+    #projects .project-item {
         flex-direction: row;
         height: 400px;
         margin: 0;
@@ -386,17 +461,53 @@ header .menu {
         border-radius: 0;
     }
 
-    #portfolio .all-projects .project-info {
+    #projects .all-projects .project-info {
         height: 100%
     }
 
-    #portfolio .all-projects .project-img {
+    #projects .all-projects .project-img {
         height: 100%
     }
 
-    #portfolio .project-item:nth-child(even) {
+    #projects .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
 
 
 }
+
+
+@media screen and (max-width: 480px){
+.text-zone h2, h2 {
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+}
+
+}
+
+@media screen and (max-width: 900px){
+.text-zone h2 {
+    line-height: 4.9rem;
+}
+}
+
+
+@media screen and (max-width: 380px){
+h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+}
+
+@media screen and (max-width: 600px){
+h2 {
+    font-size: 5.5rem;
+    line-height: 6rem;
+}}
+
+
+@media screen and (max-width: 1100px){
+h2 {
+    font-size: 6.5rem;
+    line-height: 6rem;
+}}
